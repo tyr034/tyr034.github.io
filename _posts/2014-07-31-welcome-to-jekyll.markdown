@@ -21,7 +21,7 @@ PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
 
 PATH="/Users/taoyiran/apache-maven-3.2.2/bin:${PATH}"
 
-PATH="/usr/local/mysql/bin:${PATH}"
+PATH="/usr/local/:mysql/bin:${PATH}"
 
 the other one is:
 
