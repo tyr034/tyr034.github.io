@@ -66,19 +66,26 @@ pre ol{margin-left:25px;list-style-type:decimal;}
     background-position:50% 50%;
 }
 
-.index-content .aside{
-     /*background-image:url(http://img3.douban.com/view/status/raw/public/b64cfbcc7228a9e.jpg);*/
-     background-image:url("yiranguruthief.jpg");
+
+.blog .aside{
+    background-image:url(yiran.jpg);
+}
+
+.opinion .aside{
+    background-image:url(yiranlittle.jpg);
+}
+.project .aside{
+    background-image:url(yiranyo.jpg);
 }
 
 .index-content .section { margin-left:30%; padding-top:80px; padding-right:15%; ;}
 
-.index-content .Post-list { width:70%; margin:0 auto; }
-.index-content .Post-list li { margin-bottom:70px; }
+.index-content .artical-list { width:70%; margin:0 auto; }
+.index-content .artical-list li { margin-bottom:70px; }
 .index-content h2 { font-size:20px; margin-bottom:15px; word-break: break-all;}
 .index-content h2 a { color:#444 }
 .index-content h2 a:hover { color:#E50053; text-decoration:none; }
-.index-content .description {color:#999;font-size:14px;line-height:1.6em;}
+.index-content .title-desc {color:#999;font-size:14px;line-height:1.6em;}
 
 .index-content .different-things { width:70%; margin:0 auto; }
 .index-content .different-things li { display:inline-block; *float:left; zoom:1; font-size:18px; width:32%; cursor:pointer; }
@@ -87,8 +94,8 @@ pre ol{margin-left:25px;list-style-type:decimal;}
 .index-content .different-things li a:hover { text-decoration:none; }
 .index-content .different-things li.on span{ color:red; }
 
-.index-content .bar { height:3px; width:70%; margin:0 auto;margin-bottom:100px; }
-.index-content #bar { display:inline-block; zoom:1; height:3px; background:red; position:relative; width:0; }
+.index-content .cate-bar { height:3px; width:70%; margin:0 auto;margin-bottom:100px; }
+.index-content #catebar { display:inline-block; zoom:1; height:3px; background:red; position:relative; width:0; }
 
 /***************Wiki Style*****************/
 .wiki h2{cursor:pointer;}
@@ -133,7 +140,7 @@ pre ol{margin-left:25px;list-style-type:decimal;}
     .index-content .aside { position:relative; width:100%; height:300px; max-width:none; }
     .index-content .section { margin-left:0; padding-right:0; }
     .index-content .section ul { width:85%; }
-    .index-content .bar { width:85%; }
+    .index-content .cate-bar { width:85%; }
     .index-content .different-things { margin-top:50px; }
 
     .blog .aside,

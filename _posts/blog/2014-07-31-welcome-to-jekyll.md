@@ -1,8 +1,11 @@
 ---
 layout: post
 title:  " How to Set Up Your PATH Enviroment on Mac OSX"
+description: set up development enviroment 
+category: blog
 
 ---
+## .bash_profile
 Have you ever wondered that when you type in commonad, like $ python in a terminal. How does your system know the meaning of python and the path of commoand $ python. All the magics lie
 in a shell script called .bash_profile.(for the
 difference between .bash_profile and .bashrc, 
@@ -10,6 +13,7 @@ go to this page for [details][detailsurl])
 Basically, this script get excuted everytime when you start a log in shell and tell the system
 where to find the path. 
 
+## Set Up Environment 
 I first encountered with this question when I tried
 to use maven for my project.It had a hard time finding path for java sdk. I checked out all kinds of resources online trying to figure out the correct syntax to set path in bash_profile and 
 it was so painful. At the end, I figured out two
