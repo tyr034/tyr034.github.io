@@ -49,21 +49,22 @@ to use maven for my project.It had a hard time finding path for java sdk. I chec
 it was so painful. At the end, I figured out two
 ways fo set up path,</p>
 
-<p>the first one is:
-<code>
-PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
-PATH="/Users/taoyiran/apache-maven-3.2.2/bin:${PATH}"
-PATH="/usr/local/:mysql/bin:${PATH}"</code></p>
+<p>the first one is:</p>
 
-<p>the other one is:
-<code>
-export JAVA_HOME=/usr/libexec/java_home
+<pre><code>PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
+PATH="/Users/taoyiran/apache-maven-3.2.2/bin:${PATH}"
+PATH="/usr/local/:mysql/bin:${PATH}"
+</code></pre>
+
+<p>the other one is:</p>
+
+<pre><code>export JAVA_HOME=/usr/libexec/java_home
 export TOMCAT_HOME=/usr/local/apache-tomcat-7.0.50
 export ECLIPSE_HOME=/usr/local/eclipse
 export M2_HOME=/usr/local/apache-maven-3.1.1
 export MYSQL_HOME=/usr/local/mysql-5.6.14-osx10.7-x86_64
 export PATH=$JAVA_HOME/bin:$ECLIPSE_HOME:$M2_HOME/bin:$MYSQL_HOME/bin:$TOMCAT_HOME/bin:$PATH
-</code></p>
+</code></pre>
 
 <p>Hope this will help you !</p>
 
@@ -79,9 +80,9 @@ export PATH=$JAVA_HOME/bin:$ECLIPSE_HOME:$M2_HOME/bin:$MYSQL_HOME/bin:$TOMCAT_HO
         <h2>Blog</h2>
         <ul class="artical-list">
         
-            <li><a href="/Elements-Of-Algorithm">Python Email Crawler</a></li>
+            <li><a href="/Elements-Of-Algorithm">Elements of Algorithms</a></li>
         
-            <li><a href="/Email-Python">Elements of Algorithms</a></li>
+            <li><a href="/Email-Python">Python Email Crawler</a></li>
         
             <li><a href="/welcome-to-jekyll"> How to Set Up Your PATH Enviroment On Mac OSX</a></li>
         
@@ -92,7 +93,7 @@ export PATH=$JAVA_HOME/bin:$ECLIPSE_HOME:$M2_HOME/bin:$MYSQL_HOME/bin:$TOMCAT_HO
         
         </ul>
 
-        <h2>About</h2>1
+        <h2>About</h2>
         <ul class="artical-list">
         
         </ul>
