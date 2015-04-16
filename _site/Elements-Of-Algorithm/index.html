@@ -64,9 +64,39 @@ unchang: Basics Elements of Algorithms.</p>
     return False 
 </code></pre>
 
+<p>Intersection of Two Linked Lists</p>
+
+<pre><code>def getIntersectionNode(headA, headB):
+    if headA is None or headB is None:
+        return None
+    p1,p2,q1,q2 = headA, headA,headB,headB
+    lengthA,lengthB = 0, 0
+    while p1:
+        p1 = p1.next
+        lengthA += 1
+    while q1:
+        q1 = q1.next
+        lengthB += 1
+
+    if lengthA &gt; lengthB:
+        for i in range(lengthA-lengthB):
+            p2 = p2.next
+    elif lengthB&gt;lengthA:
+        for i in range(lengthB-lengthA):
+            q2 = q2.next
+
+    while p2 and q2:
+        if p2 == q2:
+            return p2
+        p2 = p2.next
+        q2 = q2.next
+
+    return None
+</code></pre>
+
 <p>Valid Palindrome</p>
 
-<pre><code>def isPalindrome(self, s):
+<pre><code>def isPalindrome(s):
     start = 0
     end = len(s)-1
     while start&lt;end:
@@ -82,14 +112,73 @@ unchang: Basics Elements of Algorithms.</p>
     return True 
 </code></pre>
 
-<p>Intersection of Two Lists
-Sorting and Rearranging of a List</p>
+<p>Sorting and Rearranging of a List</p>
 
 <h3>Binary Search:</h3>
 
-<p>sqrt(x), pow(x,y),Median of Two Sorted Array, Search in Rotated Sorted Array</p>
+<p>sqrt(x)</p>
+
+<pre><code>def sqrt(self, x):
+    left = 0
+    right = x
+    while left &lt;= right :
+        m = left + (right-left)//2
+        if m*m == x:
+            return m 
+        elif m*m &lt;x:
+            left = m+1
+        else:
+            right = m-1
+    return (left+right)//2
+</code></pre>
+
+<p>pow(x,n)</p>
+
+<pre><code>def pow(x, n):
+    if n&gt;0:
+        return helper(x,n)
+    elif n==0:
+        return 1
+    else:
+        res = helper(x,-n)
+        return 1/res
+
+def helper(x,n):
+    if n==1:
+        return x
+    if n==2:
+        return x*x
+    elif n%2==0:
+        res = helper(x,n//2)
+        return res*res
+    else:
+        res = helper(x,(n-1)//2)
+        return x*res*res
+</code></pre>
+
+<p>Search in Rotated Sorted Array:
+Median of Two Sorted Array,</p>
 
 <h3>For Loop and Recursion (Backtracking):</h3>
+
+<p>Combination Sum:
+Given a set of candidate numbers (C) and a target number (T), find all unique combinations in C where the candidate numbers sums to T. The same repeated number may be chosen from C unlimited number of times
+    def combinationSum(self, candidates, target):
+        if candidates is None or len(candidates) == 0:
+            return None
+        return self.helper(sorted(candidates),target,[],[],0)</p>
+
+<pre><code>def helper(self,candidates, target,element,res,start):
+    if target &lt; 0:
+        return 
+    if target == 0:
+        res.append(element[:])
+    for i in range(start,len(candidates)):
+        if i&gt;=1 and candidates[i]== candidates[i-1]:
+            continue
+        self.helper(candidates,target-candidates[i],element+[candidates[i]],res,i)
+    return res 
+</code></pre>
 
 <p>Depth-first Search, All Kinds of Path Problems in Tree, Surroned region in a Matrix, Permutations, Combinations, Subsets.</p>
 
@@ -109,7 +198,26 @@ Sorting and Rearranging of a List</p>
 
 <h4>Priority Queue/ Heap:</h4>
 
-<p>merge K sorted List</p>
+<p>merge K sorted List:
+    def mergeKLists(self, lists):
+        if lists is None:
+            return None
+        h=[]
+        dummy = ListNode(0)
+        result = dummy</p>
+
+<pre><code>    for head in lists:
+        if head != None:
+            heapq.heappush(h,(head.val,head))
+    while h:
+        current = heapq.heappop(h)[1]
+        dummy.next = current
+        dummy = dummy.next
+        if current.next is not None:
+            heapq.heappush(h,(current.next.val,current.next))
+
+    return result.next
+</code></pre>
 
 <h4>Prefix Tree</h4>
 
