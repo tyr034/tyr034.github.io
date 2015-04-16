@@ -6,8 +6,7 @@ category: blog
 ---
 
 ##Introduction:
-There are infinite problems out there waiting to be solved. The only thing we could do is to seize the 
-unchang: Basics Elements of Algorithms. 
+Problmes are infinite. The only thing we could do is to seize the unchange. 
 
 ##Principles: 
 <ul>
