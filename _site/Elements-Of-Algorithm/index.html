@@ -50,7 +50,40 @@ unchang: Basics Elements of Algorithms.</p>
 
 <h3>Two Pointers:</h3>
 
-<p> 2Sum/3sum/4Sum..., Intersection of Two Lists, Valid Palindrome, Linked List Cycle, Sorting and Rearranging of a List</p>
+<p>2Sum/3sum/4Sum</p>
+
+<p>Linked List Cycle</p>
+
+<pre><code>def hasCycle(head):
+    slow = head 
+    fast = head
+    while fast and fast.next:
+        slow,fast = slow.next,fast.next.next
+        if slow is fast:
+            return True 
+    return False 
+</code></pre>
+
+<p>Valid Palindrome</p>
+
+<pre><code>def isPalindrome(self, s):
+    start = 0
+    end = len(s)-1
+    while start&lt;end:
+        while s[start].isalnum() == False and start &lt; end :
+            start +=1
+        while s[end].isalnum() == False and start &lt;end:
+            end -=1 
+        if s[start].lower() != s[end].lower():
+            return False
+        start +=1
+        end -= 1
+
+    return True 
+</code></pre>
+
+<p>Intersection of Two Lists
+Sorting and Rearranging of a List</p>
 
 <h3>Binary Search:</h3>
 

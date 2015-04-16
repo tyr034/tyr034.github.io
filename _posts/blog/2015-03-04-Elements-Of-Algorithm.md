@@ -17,7 +17,38 @@ unchang: Basics Elements of Algorithms.
 
 ##Elements:
 ###Two Pointers:
- 2Sum/3sum/4Sum..., Intersection of Two Lists, Valid Palindrome, Linked List Cycle, Sorting and Rearranging of a List 
+2Sum/3sum/4Sum
+
+Linked List Cycle
+
+	def hasCycle(head):
+ 		slow = head 
+    	fast = head
+    	while fast and fast.next:
+        	slow,fast = slow.next,fast.next.next
+       	 	if slow is fast:
+            	return True 
+    	return False 
+
+Valid Palindrome
+
+	def isPalindrome(self, s):
+        start = 0
+        end = len(s)-1
+        while start<end:
+            while s[start].isalnum() == False and start < end :
+                start +=1
+            while s[end].isalnum() == False and start <end:
+                end -=1 
+            if s[start].lower() != s[end].lower():
+                return False
+            start +=1
+            end -= 1
+            
+        return True 
+        
+Intersection of Two Lists
+Sorting and Rearranging of a List 
 
 ###Binary Search:
 sqrt(x), pow(x,y),Median of Two Sorted Array, Search in Rotated Sorted Array
