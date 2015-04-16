@@ -4,10 +4,10 @@ layout: home
 
 <div class="index-content blog">
     <div class="section">
-        <ul class="different-things">
+        <ul class="artical-cate">
             <li class="on"><a href="/"><span>Blog</span></a></li>
-            <li style="text-align:center"><a href="/opinion"><span>Little</span></a></li>
-            <li style="text-align:right"><a href="/project"><span>Yo</span></a></li>
+            <li style="text-align:center"><a href="/project"><span>Project</span></a></li>
+            <li style="text-align:right"><a href="/about"><span>About</span></a></li>
         </ul>
 
         <div class="cate-bar"><span id="cateBar"></span></div>

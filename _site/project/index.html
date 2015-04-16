@@ -1,25 +1,29 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-
-	    <meta charset="utf-8" />
-	    <title>yiran.guru</title>
-	    <meta name="author" content="Yiran" />
-	    <meta name="renderer" content="webkit">
-	     <meta name="description" content="Yiran" />
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-	    <link rel="stylesheet" href="/css/default.css" type="text/css" />
-	    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml" />
-	    <script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <!--
+    * Author:         Yiran
+    -->
+    <meta charset="utf-8" />
+    <title>BeiYuu.com</title>
+    <meta name="author" content="Yiran" />
+    <meta name="renderer" content="webkit">
+    <meta name="description" content="Yiran's Blog" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/css/default.css" type="text/css" />
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml" />
+    <script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
 </head>
 <body>
 
-    <div class="index-content project">
+
+
+    <div class="index-content opinion">
     <div class="section">
-        <ul class="different-things">
+        <ul class="artical-cate">
             <li><a href="/"><span>Blog</span></a></li>
-            <li style="text-align:center"><a href="/opinion"><span>Little</span></a></li>
-            <li class="on" style="text-align:right"><a href="/project"><span>Yo</span></a></li>
+            <li class="on" style="text-align:center"><a href="/project"><span>Project</span></a></li>
+            <li style="text-align:right"><a href="/about"><span>About</span></a></li>
         </ul>
 
         <div class="cate-bar"><span id="cateBar"></span></div>
@@ -33,6 +37,7 @@
 </div>
 
 
+
 <script type="text/javascript">
     $(function(){
         function animateBar($item,noAni){
@@ -42,9 +47,9 @@
             var width = $item.find('span').width() + 8;
 
             if(noAni){
-                $('#bar').css({left:left,width:width})
+                $('#cateBar').css({left:left,width:width})
             }else{
-                $('#bar').stop().animate({left:left,width:width},300)
+                $('#cateBar').stop().animate({left:left,width:width},300)
             }
         }
 
@@ -61,34 +66,23 @@
             };
         })();
 
-        $('.different-things li').mouseenter(function(){
+        $('.artical-cate li').mouseenter(function(){
             animateBar($(this));
         }).mouseleave(function(){
-            animateBar($('.different-things .on'));
+            animateBar($('.artical-cate .on'));
         });
 
         $(window).resize(function(e){
             waitForFinalEvent(function(){
-                animateBar($('.different-things .on'));
+                animateBar($('.artical-cate .on'));
             })
         })
-        animateBar($('.different-things.on'),true);
+        animateBar($('.artical-cate .on'),true);
     });
 </script>
+
+
 
     
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-

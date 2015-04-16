@@ -21,14 +21,24 @@ $(document).ready(function(){
         }
     };
 
-    $('pre').addClass('prettyprint linenums'); 
-******
+    $('pre').addClass('prettyprint linenums'); //添加Google code Hight需要的class
+
+    //***********************
+    //**评论的代码也删掉哦***
+    window.disqus_shortname = 'beiyuu'; // required: replace example with your forum shortname
+    $('#disqus_container .comment').on('click',function(){
+        $(this).html('加载中...');
+        var that = this;
+        $.getScript('http://' + disqus_shortname + '.disqus.com/embed.js',function(){$(that).remove()});
+    });
+    //**评论的代码也删掉哦***
+    //***********************
 
     $('.entry a').each(function(index,element){
         var href = $(this).attr('href');
         if(href){
             if(href.indexOf('#') == 0){
-            }else if ( href.indexOf('/') == 0 || href.toLowerCase().indexOf('yiran.guru')>-1 ){
+            }else if ( href.indexOf('/') == 0 || href.toLowerCase().indexOf('beiyuu.com')>-1 ){
             }else if ($(element).has('img').length){
             }else{
                 $(this).attr('target','_blank');
@@ -185,6 +195,7 @@ $(document).ready(function(){
                 });
             })
 
+            //用js计算屏幕的高度
             $('#menuIndex').css('max-height',$(window).height()-80);
         }
     })();
@@ -193,6 +204,9 @@ $(document).ready(function(){
         prettyPrint();
     });
 
+    if(/\#comment/.test(location.hash)){
+        $('#disqus_container .comment').trigger('click');
+    }
 
     if(/css3-animation/.test(location.href)){
         $("head").append("<link rel='stylesheet' type='text/css' href='/css/css3-ani.css'/>");

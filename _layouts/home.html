@@ -13,9 +13,9 @@ layout:           default
             var width = $item.find('span').width() + 8;
 
             if(noAni){
-                $('#bar').css({left:left,width:width})
+                $('#cateBar').css({left:left,width:width})
             }else{
-                $('#bar').stop().animate({left:left,width:width},300)
+                $('#cateBar').stop().animate({left:left,width:width},300)
             }
         }
 
@@ -32,17 +32,17 @@ layout:           default
             };
         })();
 
-        $('.different-things li').mouseenter(function(){
+        $('.artical-cate li').mouseenter(function(){
             animateBar($(this));
         }).mouseleave(function(){
-            animateBar($('.different-things .on'));
+            animateBar($('.artical-cate .on'));
         });
 
         $(window).resize(function(e){
             waitForFinalEvent(function(){
-                animateBar($('.different-things .on'));
+                animateBar($('.artical-cate .on'));
             })
         })
-        animateBar($('.different-things.on'),true);
+        animateBar($('.artical-cate .on'),true);
     });
 </script>
